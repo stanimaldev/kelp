@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/github.io/kelp/static/css/main.2b4ae495.chunk.css",
-    "main.js": "/github.io/kelp/static/js/main.0855880c.chunk.js",
-    "main.js.map": "/github.io/kelp/static/js/main.0855880c.chunk.js.map",
-    "runtime-main.js": "/github.io/kelp/static/js/runtime-main.7cf1d3ef.js",
-    "runtime-main.js.map": "/github.io/kelp/static/js/runtime-main.7cf1d3ef.js.map",
-    "static/js/2.8b6db376.chunk.js": "/github.io/kelp/static/js/2.8b6db376.chunk.js",
-    "static/js/2.8b6db376.chunk.js.map": "/github.io/kelp/static/js/2.8b6db376.chunk.js.map",
-    "index.html": "/github.io/kelp/index.html",
-    "precache-manifest.37723b8f0cd30983801785a6759cf35b.js": "/github.io/kelp/precache-manifest.37723b8f0cd30983801785a6759cf35b.js",
-    "service-worker.js": "/github.io/kelp/service-worker.js",
-    "static/css/main.2b4ae495.chunk.css.map": "/github.io/kelp/static/css/main.2b4ae495.chunk.css.map",
-    "static/js/2.8b6db376.chunk.js.LICENSE.txt": "/github.io/kelp/static/js/2.8b6db376.chunk.js.LICENSE.txt",
-    "static/media/SearchBar.css": "/github.io/kelp/static/media/background_search_mobile.5d0905e6.jpg",
-    "static/media/kelp.png": "/github.io/kelp/static/media/kelp.062a796b.png"
+    "main.css": "/kelp/static/css/main.5bf99b2c.chunk.css",
+    "main.js": "/kelp/static/js/main.e6a2da54.chunk.js",
+    "main.js.map": "/kelp/static/js/main.e6a2da54.chunk.js.map",
+    "runtime-main.js": "/kelp/static/js/runtime-main.c3ad113a.js",
+    "runtime-main.js.map": "/kelp/static/js/runtime-main.c3ad113a.js.map",
+    "static/js/2.8b6db376.chunk.js": "/kelp/static/js/2.8b6db376.chunk.js",
+    "static/js/2.8b6db376.chunk.js.map": "/kelp/static/js/2.8b6db376.chunk.js.map",
+    "index.html": "/kelp/index.html",
+    "precache-manifest.13865b07ca46b3304e8f40478597e7a5.js": "/kelp/precache-manifest.13865b07ca46b3304e8f40478597e7a5.js",
+    "service-worker.js": "/kelp/service-worker.js",
+    "static/css/main.5bf99b2c.chunk.css.map": "/kelp/static/css/main.5bf99b2c.chunk.css.map",
+    "static/js/2.8b6db376.chunk.js.LICENSE.txt": "/kelp/static/js/2.8b6db376.chunk.js.LICENSE.txt",
+    "static/media/SearchBar.css": "/kelp/static/media/background_search_mobile.5d0905e6.jpg",
+    "static/media/kelp.png": "/kelp/static/media/kelp.062a796b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7cf1d3ef.js",
+    "static/js/runtime-main.c3ad113a.js",
     "static/js/2.8b6db376.chunk.js",
-    "static/css/main.2b4ae495.chunk.css",
-    "static/js/main.0855880c.chunk.js"
+    "static/css/main.5bf99b2c.chunk.css",
+    "static/js/main.e6a2da54.chunk.js"
   ]
 }
