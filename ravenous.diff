@@ -6,6 +6,8 @@ Below is a list of some potential features to ADD to Ravenous:
 + Error message if there's no results to display "food in bosnia, or north korea, seoul doesn't work??" or any other weird base cases, or empty searches
 + Clicking on a different sorting option automatically requeries the Yelp API, rather than having to manually click “Let’s Go” again
 - Why do I have to click the 'sort by options' TWICE for it to requery???? -- NOW IT DOESN'T EVEN WORK ANYMORE??
+- set a warning flag to appear after initial successful search click that timesout that says "double click on any "sort by" option to change results!"
+- check CS50M note about 'immutability' DIDN'T WORK. ...spread operating a new array every time, but it seems like it's a fault on yelp. 
 
 
 - set auto default location - ask user first to allow their location - navigator.geolocation.getCurrentPosition -- not quite sure to implement this.. (also functional components?)

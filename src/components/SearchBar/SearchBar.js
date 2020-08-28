@@ -26,8 +26,9 @@ class SearchBar extends React.Component {
 
     handleSortByChange(sortByOption, event) {          /* This sets the state of a sorting option for communicating with Yelp API */
         this.setState({sortBy: sortByOption});
+        console.log(sortByOption)
         if (this.state.term && this.state.location) {
-            console.log(`sort option changed to ${event.target.textContent}`)
+            console.log(`sort option changed to ${sortByOption}`)
             this.handleSearch();
         }
     };

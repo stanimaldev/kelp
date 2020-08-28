@@ -1,11 +1,10 @@
 import React from 'react';
-// import logo from '../../favicon.ico';
 import kelp from '../../kelp.png';
+import './reset.css'
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
 import Yelp from '../../util/Yelp'
-// import Map from '../Map/Map';
 import mapboxgl from 'mapbox-gl';
 
 class App extends React.Component {
@@ -19,6 +18,7 @@ class App extends React.Component {
     this.searchYelp = this.searchYelp.bind(this);
     this.handleClick = this.handleClick.bind(this);
   };
+
 
   searchYelp(term, location, sortBy) {
     this.setState({isLoading: true})
@@ -44,6 +44,7 @@ class App extends React.Component {
   };
 
 
+
   componentDidUpdate(prevProps, prevState) {
     // console.log("App componentDidUpdate!")
     if (prevState.isLoading) {
@@ -57,7 +58,6 @@ class App extends React.Component {
     })
     // console.log('clicked!', this.state.mapView)
   }
-
 
 
 
@@ -133,10 +133,7 @@ class App extends React.Component {
       console.log(marker.properties)
     });
     
-
   }
-
-
 
 
 
@@ -161,6 +158,7 @@ class App extends React.Component {
           <button className="mapButton" onClick={this.handleClick}>{buttonStatus}</button>
         </div>
         
+        {this.state.isLoading ? <div className="loader"><img src="https://miro.medium.com/max/700/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="icon" /><p></p></div> : <BusinessList businesses={this.state.businesses}/>}
 
         <div id='map' style={mapView} ></div>
         {/* <div ref={el => this.mapContainer = el} style={mapView} className="mapContainer" /> */}
@@ -204,9 +202,7 @@ class App extends React.Component {
           </div>
         </section> */}
         
-      
-
-        {this.state.isLoading ? <div className="loader"><img src="https://miro.medium.com/max/700/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="icon" /><p></p></div> : <BusinessList businesses={this.state.businesses}/>}
+        
       </div>
     );
   }

@@ -17,6 +17,7 @@
     justify-content: center;
     margin-bottom: 2.22rem;
     color: #ffffff;
+    /* list-style: none; */
   }
   
   .SearchBar-sort-options li {
@@ -29,6 +30,10 @@
     font-weight: 600;
     font-size: .83rem;
     transition: color .25s;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   
   .SearchBar-sort-options li:hover {
