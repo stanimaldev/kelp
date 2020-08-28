@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b9d0a35fce52949bdb52263bad7ceed5",
+    "revision": "b020308de2df418d88cd31767d20d510",
     "url": "/github.io/kelp/index.html"
   },
   {
-    "revision": "90fe774cafab6ea16101",
-    "url": "/github.io/kelp/static/css/main.186613d7.chunk.css"
+    "revision": "f36be6cadb6e9b16917c",
+    "url": "/github.io/kelp/static/css/main.2b4ae495.chunk.css"
   },
   {
-    "revision": "992986236fb77593d640",
-    "url": "/github.io/kelp/static/js/2.85eca3e0.chunk.js"
+    "revision": "261b855379095f38cccc",
+    "url": "/github.io/kelp/static/js/2.8b6db376.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/github.io/kelp/static/js/2.85eca3e0.chunk.js.LICENSE.txt"
+    "url": "/github.io/kelp/static/js/2.8b6db376.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "90fe774cafab6ea16101",
-    "url": "/github.io/kelp/static/js/main.0d131571.chunk.js"
+    "revision": "f36be6cadb6e9b16917c",
+    "url": "/github.io/kelp/static/js/main.0855880c.chunk.js"
   },
   {
     "revision": "d827085a58688ff80e20",
