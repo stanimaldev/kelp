@@ -1,5 +1,6 @@
 const apiKey = 'pNUUtdTjrkfUQQ6oulCCXktMcftn4rR1VUc2uKWt0uxxqOeoHUUvzS_CorL4NtLvK_TDzR7xYaNYy7W8umfbNPPKdHexEmhvZs9mZl1blmePnovnY9AT2CirAR_tXnYx';
 
+/* https://www.yelp.com/developers/documentation/v3/business_search */
 const Yelp = {
     search: async (term, location, sortBy) => {
             /* to bypass the CORS restriction, use CORS Anywhere */
@@ -12,7 +13,7 @@ const Yelp = {
         if (jsonResponse.businesses) {
             return jsonResponse.businesses.map(business => {    
                 return {
-                    id: business.id,                            /* https://www.yelp.com/developers/documentation/v3/business_search */
+                    id: business.id,                            
                     imageSrc: business.image_url,
                     url: business.url,
                     name: business.name,
@@ -20,11 +21,12 @@ const Yelp = {
                     city: business.location.city,
                     state: business.location.state,
                     zipCode: business.location.zip_code,
-                    category: business.categories[0].title,
+                    category: business.categories[0] ? business.categories[0].title : null,
                     rating: business.rating,
-                    reviewCount: business.review_count
+                    reviewCount: business.review_count,
+                    coordinates: business.coordinates
                 }
-            }); 
+            });
         }
     }
 };

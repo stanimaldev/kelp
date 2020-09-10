@@ -1,12 +1,16 @@
 Below is a list of some potential features to ADD to Ravenous:
 
+
+Kanban board!
+https://github.com/stanimaldev/kelp/projects/1?add_cards_query=is%3Aopen 
+
 !TO-DO:
 # if businesses list is empty / no results: 
 # https://www.yelp.com/developers/documentation/v3/business_search
 + Error message if there's no results to display "food in bosnia, or north korea, seoul doesn't work??" or any other weird base cases, or empty searches
 + Clicking on a different sorting option automatically requeries the Yelp API, rather than having to manually click “Let’s Go” again
 - Why do I have to click the 'sort by options' TWICE for it to requery???? -- NOW IT DOESN'T EVEN WORK ANYMORE??
-- set a warning flag to appear after initial successful search click that timesout that says "double click on any "sort by" option to change results!"
+- set a warning flag to appear after initial successful search click that timesout that says "double click on any "sort by" option to change results!" - use a setTimeout!!
 - check CS50M note about 'immutability' DIDN'T WORK. ...spread operating a new array every time, but it seems like it's a fault on yelp. 
 
 
@@ -21,9 +25,9 @@ Below is a list of some potential features to ADD to Ravenous:
 - YELP AUTOCOMPLETE! https://www.yelp.com/developers/documentation/v3/autocomplete 
 
 
-- other maps APIs https://nordicapis.com/5-powerful-alternatives-to-google-maps-api/
++ other maps APIs https://nordicapis.com/5-powerful-alternatives-to-google-maps-api/
 - https://docs.mapbox.com/help/tutorials/markers/#add-a-marker-to-your-application
-- CURRENTLY TRYING: https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/
++ CURRENTLY TRYING: https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/
   - https://account.mapbox.com/access-tokens/
   - https://www.mapbox.com/install/js/bundler-install/
   - https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/
@@ -31,7 +35,7 @@ Below is a list of some potential features to ADD to Ravenous:
   - https://docs.mapbox.com/help/tutorials/add-points-pt-1/
 
 
-- Kind of what I'm going for: https://docs.mapbox.com/help/tutorials/building-a-store-locator/
++ Kind of what I'm going for: https://docs.mapbox.com/help/tutorials/building-a-store-locator/
 
 
 
@@ -56,7 +60,7 @@ Animations/CSS:
 
 
 Deploy:
-- https://youtu.be/4NapRkCazks to GH pages
++ https://youtu.be/4NapRkCazks to GH pages
 
 
 !DONE:

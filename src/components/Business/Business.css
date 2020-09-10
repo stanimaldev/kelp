@@ -10,6 +10,9 @@ html {
     margin: 0 .5rem 2.3rem .5rem;
     transition: all ease 0.4s;
     animation: loadbusiness 1s ease;
+    background-color: #eddcbc;
+    padding: 1em;
+    border-radius: 0.7em;
   }
 
   @keyframes loadbusiness {
@@ -20,13 +23,20 @@ html {
   .Business .image-container {
     height: 16.66rem;
     margin-bottom: 1rem;
-    transition: all ease 0.4s;
     border-radius: 10px;
+    transition: all ease 0.3s;
   }
   
-  .Business .image-container:hover {
+  .Business .image-container img {
+    /* overflow: hidden; */
+    transition: all ease 0.3s;
+    padding-top: 0.15em;
+  }
+  
+  .Business .image-container:hover{
     box-shadow:  3px 4px 30px 1px black;
     transform: scale(1.03, 1.03);
+    /* opacity: 0.5; */
     /* width: 17rem; */
     /* background-color: #C0D6DF; */
     border-radius: 15px;

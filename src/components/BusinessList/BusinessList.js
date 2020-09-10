@@ -4,8 +4,9 @@ import Business from '../Business/Business';
 
 
 function BusinessList (props) {
+
     return (
-        <div className="BusinessList">
+        <div className="BusinessList" style={props.style}>
             {props.businesses.map(business => <Business business={business} key={business.id}/> )}
         </div>
     )

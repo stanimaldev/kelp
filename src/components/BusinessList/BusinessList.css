@@ -1,6 +1,11 @@
 .BusinessList {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 4.4rem 10%;
+    margin: 1.5rem 3%;
+    border: solid palevioletred 2px;
+    /* width: 45%; */
+    /* background-color: #eed6a5b6; */
+    padding-top: 1.5em;
+    border-radius: 0.7em;
   }
