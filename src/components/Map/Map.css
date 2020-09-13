@@ -55,22 +55,31 @@
   cursor: pointer;
 }
 
-/* .marker {
-  background-image: url("../../red-marker.png");
-  background-size: cover;
-  background-position: center;
-  width: 30px;
-  height: 49px;
-  cursor: pointer;
-} */
-
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (max-width: 900px) {
+  .mapBackground {
+    background: black;
+  }
+  #map {
+    background: black;
+    border-bottom: solid black 3em;
+    height: 37vh;
+    margin: 0em auto;
+    width: 98vw;
+  }
+  .mapButton {
+    margin: 1em;
+    height: 2em;
+    width: 8em;
+  }
 }
 
 /* OLD GOOGLE MAPS PLACES STYLING */

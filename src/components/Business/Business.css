@@ -34,19 +34,29 @@ html {
   }
   
   .Business .image-container:hover{
-    box-shadow:  3px 4px 30px 1px black;
-    transform: scale(1.03, 1.03);
+    /* box-shadow:  3px 4px 30px 1px black; */
+    /* transform: scale(1.03, 1.03); */
     /* opacity: 0.5; */
     /* width: 17rem; */
     /* background-color: #C0D6DF; */
-    border-radius: 15px;
+    /* border-radius: 15px; */
   }
 
   .Business h2 {
     margin-bottom: .5rem;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 600;  
   }
+
+  .Business-name {
+    color: black;
+    text-decoration: none;
+    transition: all ease-out 0.3s;
+  }
+
+  /* .Business-name:hover {
+    color: #cc7953;
+  } */
   
   .Business-information {
     display: flex;
@@ -68,13 +78,17 @@ html {
   
   .Business-address:hover {
     /* box-shadow:  3px 4px 30px 1px whitesmoke; */
-    transform: translate(0%, -2%);
-
+    /* transform: translate(0%, -2%); */
   }
 
   .Business-address a {
     color: rgb(28, 153, 187);
     text-decoration: none;
+    transition: all ease 0.3s;
+  }
+
+  .Business-address a:hover {
+    /* color: #cc7953; */
   }
 
   .Business-reviews {
@@ -92,4 +106,30 @@ html {
   .Business-reviews .rating {
     font-size: .88rem;
     line-height: 1rem;
+  }
+
+
+  @media only screen and (min-width: 900px) {
+
+  .Business .image-container:hover{
+    box-shadow:  3px 4px 30px 1px black;
+    transform: scale(1.03, 1.03);
+    /* opacity: 0.5; */
+    /* width: 17rem; */
+    /* background-color: #C0D6DF; */
+    border-radius: 15px;
+  }
+
+    .Business-name:hover {
+      color: #cc7953;
+    }
+
+    .Business-address:hover {
+      /* box-shadow:  3px 4px 30px 1px whitesmoke; */
+      transform: translate(0%, 0%);
+    }
+  
+    .Business-address a:hover {
+      color: #cc7953;
+    }
   }

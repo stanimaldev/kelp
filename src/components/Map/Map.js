@@ -1,13 +1,15 @@
-import React, {useState, useEffect, useCallback, useRef} from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
+import {useSelector} from 'react-redux';
 
-export default function Map({ onClick, businesses }) {
+export default function Map({ onClick, businesses, clickedBusiness }) {
   const [mapOpen, setMapView] = useState(false);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [map, setMap] = useState();
   let currentMarkers = useRef([]);
-  let businessList = useRef([]);
+
+  const currentBiz = useSelector(state => state);
 
   const renderMap = useCallback(() => {
     loadScript("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js");
@@ -34,11 +36,14 @@ export default function Map({ onClick, businesses }) {
       zoom: 3
     });
 
-    setMap(map);
+    map.on("load", () => {
+      setMap(map);
+      map.resize();
+    })
   }
 
 
-  const updateMarkers = useCallback(() => {
+  const updateMarkers = useCallback((clickedBusiness) => {
     var geojson = {
       type: 'FeatureCollection',
       features: businesses.map(business => {
@@ -50,6 +55,7 @@ export default function Map({ onClick, businesses }) {
           },
           properties: {
             title: business.name,
+            address: business.address,
             city: business.city,
             category: business.category,
             url: business.url
@@ -84,7 +90,6 @@ export default function Map({ onClick, businesses }) {
     // console.log(geojson);
     
 
-    // businessList.current = [...businesses]
     // remove previous markers
     // setTimeout(() => {
       if (currentMarkers.current !== businesses) {
@@ -113,13 +118,6 @@ export default function Map({ onClick, businesses }) {
     currentMarkers.current.push(myMarker);
     console.log("currentMarkers!", currentMarkers);
 
-    
-    // console.log(marker.properties)
-
-    // if (myMarker) {
-    //   myMarker.remove()
-    //   console.log("myMarker removed")
-    // }
 
       function flyToArea(currentFeature) {
         map.flyTo({
@@ -133,13 +131,26 @@ export default function Map({ onClick, businesses }) {
       function flyToSpot(currentFeature) {
         map.flyTo({
           center: currentFeature.geometry.coordinates,
-          zoom: 15
+          zoom: 14
         });
       }
       
       el.addEventListener('click', function(e) {
         flyToSpot(marker);
+        // console.log(marker.properties.address);
+        // console.log("ClickedBusiness: ", clickedBusiness)
+        console.log(currentMarkers.current[2]._lngLat.lng.toFixed(4));
+        console.log("clicked", marker)
       })
+
+      currentMarkers.current.forEach(marker => {
+        // if (marker._lngLat.lng.toFixed(4) === clickedBusiness) {
+        if (clickedBusiness) {
+          flyToSpot(marker);
+          console.log("clicked", marker)
+        }
+      })
+
     });
 
   }, [businesses]);
@@ -158,12 +169,14 @@ export default function Map({ onClick, businesses }) {
 
 
   useEffect(() => {
-    console.log("businesses Array", businesses)
+    // console.log("businesses Array", businesses)
     // removeMarkers();
     updateMarkers();
-  })
+  }, [businesses])
+
 
   function handleClick() {
+    console.log(currentBiz, "map toggle");
     if (!mapLoaded) {
       // renderMap();
       setMapLoaded(true);
@@ -221,7 +234,7 @@ export default function Map({ onClick, businesses }) {
   const buttonStatus = mapOpen ? "Hide Map" : "Show Map";
 
   return (
-    <div>
+    <div className="mapBackground">
      <div className="mapButtContainer">
        <button className="mapButton" onClick={handleClick}>{buttonStatus}</button>
      </div>

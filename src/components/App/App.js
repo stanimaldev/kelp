@@ -14,7 +14,9 @@ export default function App() {
   const [businesses, setBusinesses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [mapOpen, setMapOpen] = useState(false);
-
+  const [clickedBusiness, setClickedBusiness] = useState();
+  const [windowSmall, setWindowSmall] = useState(false);
+  
 
   function searchYelp(term, location, sortBy) {
     setIsLoading(true);
@@ -77,15 +79,37 @@ export default function App() {
     // console.log(mapOpen);
   }
 
+  const clickOnBusiness = (address) => {
+    setClickedBusiness(address);
+    // console.log(clickedBusiness, "address set from App Component!");
+  }
+
+
+
+  useEffect(() => {
+    window.addEventListener('resize', function() {
+        // console.log(window.innerWidth);
+        // console.log(document.documentElement.clientWidth)
+        let viewPortWidth = window.innerWidth || document.documentElement.clientWidth;
+        if (viewPortWidth < 900) {
+          setWindowSmall(true)
+        } if (viewPortWidth > 900){
+          setWindowSmall(false);
+        }
+        // console.log(windowSmall);
+    })
+  }, [windowSmall])
+
+  const BusinessListWidth = mapOpen && !windowSmall ? {width: "50%"} : {width: "100%"};
+
   // const mapOpenStyle = mapOpen ? {visibility: "visible", width: "45%"} : {visibility: "hidden", width: "0%", display: "none"};
-  const BusinessListWidth = mapOpen ? {width: "50%"} : {width: "100%"};
 
   return (
     <div className="App">
       <h1 className="logo-container">
         <a href="/" className="logo" style={{textDecoration: 'none', color: "white"}}>
           <span>kelp</span>
-          <img src={kelp} alt="kelp logo" height="35px"/>
+          <img src={kelp} alt="kelp logo" height="30px"/>
         </a>
       </h1>
       <SearchBar searchYelp={searchYelp}/>
@@ -96,20 +120,21 @@ export default function App() {
 
 
       <div id="mapComponent" className="sticky">
-        <Map onClick={toggleSearchResultsWidth} businesses={businesses}/>
+          <Map onClick={toggleSearchResultsWidth} businesses={businesses} clickedBusiness={clickedBusiness}/>
       </div>
       
-      <div style={BusinessListWidth}>
+      <div style={BusinessListWidth} className="BizListContainer">
         {isLoading ? 
           <div className="loader">
             {/* <img src="https://miro.medium.com/max/700/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="icon" />
             <p>LOADING...</p> */}
             <Loader style={{display: 'flex', alignItems:"center", justifyContent: "center"}}/>
           </div>
-        : <BusinessList businesses={businesses}
+        : <BusinessList businesses={businesses} clickOnBusiness={clickOnBusiness}
           />
         }
       </div>
+
 
 
 
@@ -300,4 +325,4 @@ export default function App() {
 
 // export default App;
 
-// https://www.codecademy.com/paths/build-web-apps-with-react/tracks/bwa-ajax-requests-and-api-interactions/modules/bwa-ravenous-part-four/projects/interacting-with-yelp-api
+// https://www.codecademy.com/paths/build-web-apps-with-react/tracks/bwa-ajax-requests-and-api-interactions/modules/bwa-ravenous-part-four/projects/interacting-with-yelp-api 

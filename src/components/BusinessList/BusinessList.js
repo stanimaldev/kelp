@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './BusinessList.css';
 import Business from '../Business/Business';
 
@@ -7,7 +7,7 @@ function BusinessList (props) {
 
     return (
         <div className="BusinessList" style={props.style}>
-            {props.businesses.map(business => <Business business={business} key={business.id}/> )}
+            {props.businesses.map(business => <Business business={business} className="biz" key={business.id} clickOnBusiness={props.clickOnBusiness}/> )}
         </div>
     )
 }

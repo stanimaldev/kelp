@@ -86,13 +86,69 @@
 }
 
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+  body {
+    // background: blueviolet
+  }
+
+  .mapBackground {
+    background: black;
+    // height: 55vh;
+    // text-align: center;
+  }
+
+  #map {
+    // position: absolute;
+    background: black;
+    // border: solid black 2em;
+    border-bottom: solid black 3em;
+    // padding: 1em;
+    height: 37vh;
+    margin: 0em auto;
+    width: 98vw;
+    // right: 0;
+  } 
+
+  .mapButton {
+    margin: 1em;
+    height: 2em;
+    width: 8em;
+  }
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
