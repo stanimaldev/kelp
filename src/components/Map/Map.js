@@ -7,6 +7,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
   const [mapOpen, setMapView] = useState(false);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [map, setMap] = useState();
+  const [stateMarkers, setStateMarkers] = useState([]);
   let currentMarkers = useRef([]);
 
   const currentBiz = useSelector(state => state);
@@ -43,7 +44,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
   }
 
 
-  const updateMarkers = useCallback((clickedBusiness) => {
+  const updateMarkers = useCallback(() => {
     var geojson = {
       type: 'FeatureCollection',
       features: businesses.map(business => {
@@ -90,6 +91,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
     // console.log(geojson);
     
 
+
     // remove previous markers
     // setTimeout(() => {
       if (currentMarkers.current !== businesses) {
@@ -116,7 +118,8 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.city + '</p>' + marker.properties.category + '<a href="' + marker.properties.url + '" target="_blank"><p>Yelp Page</p><a>'))
     .addTo(map);
     currentMarkers.current.push(myMarker);
-    console.log("currentMarkers!", currentMarkers);
+    setStateMarkers([currentMarkers.current]);
+    // console.log("currentMarkers!", currentMarkers);
 
 
       function flyToArea(currentFeature) {
@@ -156,10 +159,21 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
   }, [businesses]);
 
 
+  function flyToSpot(currentFeature) {
+    map.flyTo({
+      center: currentFeature.coordinates,
+      zoom: 14
+    });
+  }
 
-  // const removeMarkers = () => {
-
-  // }
+  useEffect(() => {
+    if (businesses && clickedBusiness) {
+      flyToSpot({coordinates: [clickedBusiness[0], clickedBusiness[1]]})
+      console.log(currentMarkers.current);
+      
+      // marker.openPopup();
+    }
+  } ,[clickedBusiness])
 
 
   useEffect(() => {
@@ -175,8 +189,12 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
   }, [businesses])
 
 
+
   function handleClick() {
-    console.log(currentBiz, "map toggle");
+
+    // console.log(clickedBusiness);
+    // console.log(currentMarkers.current);
+    // console.log(stateMarkers);
     if (!mapLoaded) {
       // renderMap();
       setMapLoaded(true);

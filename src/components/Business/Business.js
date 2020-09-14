@@ -1,4 +1,4 @@
-import React, { useDebugValue } from 'react';
+import React from 'react';
 import './Business.css';
 import { useSelector, useDispatch } from "react-redux";
 import setCurrentBiz from '../redux/store';
@@ -8,16 +8,16 @@ export default function Business({ business, clickOnBusiness }) {
   const dispatch = useDispatch();
 
   const handleImageClick = (e) => {
-    dispatch(setCurrentBiz(e))
-    console.log(currentBiz, "from Business Component!")
-    // clickOnBusiness(e.target.alt)
-    // console.log(e.target.alt, "from Business Component!")
+    // dispatch(setCurrentBiz(e))
+    // console.log(currentBiz, "from Business Component!")
+    clickOnBusiness(e.target.alt.split(','))
+    console.log(e.target.alt, "from Business Component!")
   }
 
   return (
       <div className="Business">
-        <div className="image-container"> {/* -95.9255552 */}
-          <img src={business.imageSrc} alt={business.coordinates.longitude.toFixed(4)} onClick={() => handleImageClick}/>
+        <div className="image-container">
+          <img src={business.imageSrc} alt={[business.coordinates.longitude, business.coordinates.latitude]} onClick={handleImageClick}/>
         </div>
         <a href={business.url} target="_blank" rel="noopener noreferrer" className="Business-name"><h2>{business.name}</h2></a>
         <div className="Business-information">

@@ -79,8 +79,8 @@ export default function App() {
     // console.log(mapOpen);
   }
 
-  const clickOnBusiness = (address) => {
-    setClickedBusiness(address);
+  const clickOnBusiness = (coordinates) => {
+    setClickedBusiness(coordinates);
     // console.log(clickedBusiness, "address set from App Component!");
   }
 
