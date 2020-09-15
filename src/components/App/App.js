@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import kelp from '../../kelp.png';
 import './reset.css'
 import './App.css';
@@ -8,6 +8,7 @@ import Yelp from '../../util/Yelp'
 import Map from '../Map/Map';
 import Loader from '../Loader/Loader';
 // import MapButton from '../MapButton/MapButton';
+import { useSelector } from 'react-redux';
 
 
 export default function App() {
@@ -16,6 +17,8 @@ export default function App() {
   const [mapOpen, setMapOpen] = useState(false);
   const [clickedBusiness, setClickedBusiness] = useState();
   const [windowSmall, setWindowSmall] = useState(false);
+  
+  const globalState = useSelector(state => state);
   
 
   function searchYelp(term, location, sortBy) {
@@ -79,11 +82,41 @@ export default function App() {
     // console.log(mapOpen);
   }
 
+  const [bizId, setBizId] = useState();
+
   const clickOnBusiness = (coordinates) => {
     setClickedBusiness(coordinates);
-    // console.log(clickedBusiness, "address set from App Component!");
   }
 
+
+  
+  // const usePrevious = (value) => {
+  //   const ref = useRef();
+  //   useEffect(() => {
+  //     ref.current = value;
+  //   });
+  //   return ref.current;
+  // }
+
+  
+  const prevBizDiv = useRef();
+  
+  useEffect(() => {
+    let bizToHighlight = document.getElementById(globalState.currentMarker)
+    if (bizToHighlight) {
+      console.log(bizToHighlight)
+      bizToHighlight.classList.add("activeBiz");
+      bizToHighlight.scrollIntoView({behavior: "smooth"});
+      console.log(prevBizDiv.current)
+    }
+    if (prevBizDiv.current && prevBizDiv.current !== bizToHighlight) {
+      prevBizDiv.current.classList.remove("activeBiz");
+    }
+    prevBizDiv.current = bizToHighlight;
+    // if (currentBizDiv.current !== bizToHighlight) {
+    //   currentBizDiv.current.classList.toggle("active");
+    // }
+}, [globalState.currentMarker])
 
 
   useEffect(() => {

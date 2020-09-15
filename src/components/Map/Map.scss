@@ -105,13 +105,16 @@
   }
 
   .mapBackground {
+    // position: absolute;
+    // top: 0;
     background: black;
     // height: 55vh;
     // text-align: center;
   }
 
   #map {
-    // position: absolute;
+    position: relative;
+    bottom: 0;
     background: black;
     // border: solid black 2em;
     border-bottom: solid black 3em;

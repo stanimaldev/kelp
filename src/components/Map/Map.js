@@ -1,16 +1,19 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useDebugValue } from 'react';
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import currentBusinessStore from '../redux/store';
 
 export default function Map({ onClick, businesses, clickedBusiness }) {
   const [mapOpen, setMapView] = useState(false);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [map, setMap] = useState();
   const [stateMarkers, setStateMarkers] = useState([]);
+  const businessId = useRef();
   let currentMarkers = useRef([]);
 
-  const currentBiz = useSelector(state => state);
+  const dispatch = useDispatch();
+  const globalState = useSelector(state => state);
 
   const renderMap = useCallback(() => {
     loadScript("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js");
@@ -59,7 +62,8 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
             address: business.address,
             city: business.city,
             category: business.category,
-            url: business.url
+            url: business.url,
+            id: business.id
           }
         }
       })
@@ -140,17 +144,20 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
       
       el.addEventListener('click', function(e) {
         flyToSpot(marker);
+        // businessId.current = marker.properties.id;
         // console.log(marker.properties.address);
         // console.log("ClickedBusiness: ", clickedBusiness)
-        console.log(currentMarkers.current[2]._lngLat.lng.toFixed(4));
-        console.log("clicked", marker)
+        // console.log(currentMarkers.current[2]._lngLat.lng.toFixed(4));
+        dispatch({ type: "MARKER_CLICKED", payload: marker.properties.id })
+        // console.log(globalState);
+        // console.log("clicked", marker)
       })
 
       currentMarkers.current.forEach(marker => {
         // if (marker._lngLat.lng.toFixed(4) === clickedBusiness) {
         if (clickedBusiness) {
-          flyToSpot(marker);
-          console.log("clicked", marker)
+          // flyToSpot(marker);
+          // console.log("clicked", marker)
         }
       })
 
@@ -169,16 +176,22 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
   useEffect(() => {
     if (businesses && clickedBusiness) {
       flyToSpot({coordinates: [clickedBusiness[0], clickedBusiness[1]]})
-      console.log(currentMarkers.current);
+      // console.log(currentMarkers.current[2]._lngLat.lng.toFixed(4));
       
-      // marker.openPopup();
+      currentMarkers.current.forEach(marker => {
+        if (marker._lngLat.lng.toFixed(4) === Number(clickedBusiness[0]).toFixed(4)) {
+          // marker.openPopup(marker);
+          // console.log(marker._lngLat.lng.toFixed(4), "marker");
+          // console.log(Number(clickedBusiness[0]).toFixed(4), "business");
+        }
+      });
     }
   } ,[clickedBusiness])
 
 
   useEffect(() => {
     renderMap();
-    console.log("rendermap")
+    console.log("first rendermap() launched")
   }, [renderMap])
 
 
@@ -322,5 +335,5 @@ function loadScript(url) {
   // script.defer = true;
   // head.append(script);
   index.parentNode.insertBefore(script, index);
-  console.log('script loaded')
+  // console.log('loadScript script loaded')
 };

@@ -1,21 +1,44 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Business.css';
 import { useSelector, useDispatch } from "react-redux";
 import setCurrentBiz from '../redux/store';
 
-export default function Business({ business, clickOnBusiness }) {  
+export default function Business({ business, clickOnBusiness, id }) {  
   const currentBiz = useSelector(state => state);
   const dispatch = useDispatch();
+  const [clickedBiz, setClickedBiz] = useState();
 
   const handleImageClick = (e) => {
     // dispatch(setCurrentBiz(e))
     // console.log(currentBiz, "from Business Component!")
     clickOnBusiness(e.target.alt.split(','))
-    console.log(e.target.alt, "from Business Component!")
+    // console.log(e.target.alt, "from Business Component!")
   }
 
+  // const prevBizDiv = useRef();
+
+  // useEffect(() => {
+  //   const selected = document.getElementById(id);
+  //   if (selected) {
+  //     selected.addEventListener('click', function() {
+  //       setClickedBiz(selected);
+  //       prevBizDiv.current = selected;
+  //       console.log(selected)
+  //       selected.classList.add("activeBiz");
+  //       console.log(prevBizDiv.current)
+  //       if (prevBizDiv.current && prevBizDiv.current !== selected) {
+  //         prevBizDiv.current.classList.remove("activeBiz");
+  //       }
+  //       prevBizDiv.current = "";
+  //     });
+  //   }
+
+  //   return
+  // }, [business])
+
+
   return (
-      <div className="Business">
+      <div className="Business" id={id}>
         <div className="image-container">
           <img src={business.imageSrc} alt={[business.coordinates.longitude, business.coordinates.latitude]} onClick={handleImageClick}/>
         </div>

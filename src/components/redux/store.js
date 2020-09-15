@@ -9,13 +9,20 @@ export const setCurrentBiz = (e) => {
 }
 
 
+const defaultState = {
+  currentBiz: "bananas",
+  currentMarker: "default marker!"
+}
+
 // export Reducer
-export const currentBusinessReducer = (currentBiz = "bananas", action) => {
+export const currentBusinessReducer = (state = defaultState, action) => {
   switch(action.type) {
     case "BUSINESS_CLICKED":
-      return currentBiz = action.payload
+      return {...state, currentBiz: action.payload}
+    case "MARKER_CLICKED":
+      return {...state, currentMarker: action.payload}
     default:
-      return currentBiz
+      return state
   }
 }
 
@@ -25,7 +32,7 @@ const currentBusinessStore = createStore(currentBusinessReducer);
 
 
 // Subscribe Function
-currentBusinessStore.subscribe(() => console.log(currentBusinessStore.getState()))
+// currentBusinessStore.subscribe(() => console.log(currentBusinessStore.getState()))
 
 // Export the store
 export default currentBusinessStore;

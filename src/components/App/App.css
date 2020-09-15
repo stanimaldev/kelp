@@ -73,8 +73,9 @@ h1 {
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 1px) and (max-width: 900px) {
   .BizListContainer {
     margin-top: 23em;
   }
+
 }
