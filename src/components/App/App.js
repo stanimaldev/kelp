@@ -139,7 +139,7 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="logo-container">
-        <a href="/" className="logo" style={{textDecoration: 'none', color: "white"}}>
+        <a href="/kelp" className="logo" style={{textDecoration: 'none', color: "white"}}>
           <span>kelp</span>
           <img src={kelp} alt="kelp logo" height="30px"/>
         </a>

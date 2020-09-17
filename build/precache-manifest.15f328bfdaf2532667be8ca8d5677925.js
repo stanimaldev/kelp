@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "920555f4c23319d17b811c3e6debf0c6",
+    "revision": "90a162a32acd2b426a66b2616cc2ff42",
     "url": "/kelp/index.html"
   },
   {
