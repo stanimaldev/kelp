@@ -7,7 +7,6 @@ import SearchBar from '../SearchBar/SearchBar';
 import Yelp from '../../util/Yelp'
 import Map from '../Map/Map';
 import Loader from '../Loader/Loader';
-// import MapButton from '../MapButton/MapButton';
 import { useSelector } from 'react-redux';
 
 
@@ -82,7 +81,7 @@ export default function App() {
     // console.log(mapOpen);
   }
 
-  const [bizId, setBizId] = useState();
+  // const [bizId, setBizId] = useState();
 
   const clickOnBusiness = (coordinates) => {
     setClickedBusiness(coordinates);
@@ -104,10 +103,10 @@ export default function App() {
   useEffect(() => {
     let bizToHighlight = document.getElementById(globalState.currentMarker)
     if (bizToHighlight) {
-      console.log(bizToHighlight)
+      // console.log(bizToHighlight)
       bizToHighlight.classList.add("activeBiz");
-      bizToHighlight.scrollIntoView({behavior: "smooth"});
-      console.log(prevBizDiv.current)
+      bizToHighlight.scrollIntoView({block: 'start', inline: 'start', behavior: "smooth"});
+      // console.log(prevBizDiv.current)
     }
     if (prevBizDiv.current && prevBizDiv.current !== bizToHighlight) {
       prevBizDiv.current.classList.remove("activeBiz");

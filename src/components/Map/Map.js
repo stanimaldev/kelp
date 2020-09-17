@@ -1,19 +1,20 @@
-import React, { useState, useEffect, useCallback, useRef, useDebugValue } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
-import {useSelector, useDispatch} from 'react-redux';
-import currentBusinessStore from '../redux/store';
+import { useDispatch} from 'react-redux';
+const API_KEY = process.env.REACT_APP_MAPBOXGL_ACCESSTOKEN;
+// import currentBusinessStore from '../redux/store';
 
 export default function Map({ onClick, businesses, clickedBusiness }) {
   const [mapOpen, setMapView] = useState(false);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [map, setMap] = useState();
   const [stateMarkers, setStateMarkers] = useState([]);
-  const businessId = useRef();
+  // const businessId = useRef();
   let currentMarkers = useRef([]);
 
   const dispatch = useDispatch();
-  const globalState = useSelector(state => state);
+  // const globalState = useSelector(state => state);
 
   const renderMap = useCallback(() => {
     loadScript("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js");
@@ -32,7 +33,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
     // console.log('initMap running')
     // console.log(businesses.map(business => Number(business.coordinates.longitude.toFixed(3))))
     // console.log(businesses.map(business => business))
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic3Rhbi1kZXYiLCJhIjoiY2tlYm9leWpjMGFpMjJ0cndybWdpbmVwMSJ9.I0CXw1DFG7WYKgyVm7x07A';
+    mapboxgl.accessToken = API_KEY;
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
@@ -101,7 +102,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
       if (currentMarkers.current !== businesses) {
         currentMarkers.current.forEach(marker => marker.remove());
         currentMarkers.current = [];
-        console.log("removeMarkers!", currentMarkers)
+        console.log("remove existing markers!", currentMarkers)
       }
     // }, 2000);
   

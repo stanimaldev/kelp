@@ -43,7 +43,7 @@
   position: absolute;
   height: 75vh;
   margin: 2em 3em;
-  border: solid black 2px;
+  // border: solid black 2px;
   width: 45%;
   right: 0;
   // float: right;
@@ -104,6 +104,21 @@
     // background: blueviolet
   }
 
+  // map on bottom
+  .mapButtContainer {
+    // width: 2em;
+    // text-align: right;
+    // position: absolute;
+    // bottom: -103vh;
+    // text-align: right;
+    z-index: 50;
+    background-color: black;
+    // height: 4em;
+    // width: 100vw;
+    // top: 24em;
+    // border: green solid 1px;
+  }
+
   .mapBackground {
     // position: absolute;
     // top: 0;
@@ -112,12 +127,13 @@
     // text-align: center;
   }
 
+  // map on bottom
   #map {
     position: relative;
     bottom: 0;
     background: black;
     // border: solid black 2em;
-    border-bottom: solid black 3em;
+    border-bottom: solid black 2em;
     // padding: 1em;
     height: 37vh;
     margin: 0em auto;
@@ -126,7 +142,7 @@
   } 
 
   .mapButton {
-    margin: 1em;
+    margin: 0.5em;
     height: 2em;
     width: 8em;
   }

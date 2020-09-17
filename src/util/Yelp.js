@@ -1,4 +1,4 @@
-const apiKey = 'pNUUtdTjrkfUQQ6oulCCXktMcftn4rR1VUc2uKWt0uxxqOeoHUUvzS_CorL4NtLvK_TDzR7xYaNYy7W8umfbNPPKdHexEmhvZs9mZl1blmePnovnY9AT2CirAR_tXnYx';
+const apiKey = process.env.REACT_APP_YELP_APIKEY;
 
 /* https://www.yelp.com/developers/documentation/v3/business_search */
 const Yelp = {

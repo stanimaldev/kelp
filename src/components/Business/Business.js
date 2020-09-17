@@ -1,12 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import './Business.css';
-import { useSelector, useDispatch } from "react-redux";
-import setCurrentBiz from '../redux/store';
+import defaultImage from '../../favicon.ico';
+// import { useSelector, useDispatch } from "react-redux";
+// import setCurrentBiz from '../redux/store';
 
 export default function Business({ business, clickOnBusiness, id }) {  
-  const currentBiz = useSelector(state => state);
-  const dispatch = useDispatch();
-  const [clickedBiz, setClickedBiz] = useState();
+  // const currentBiz = useSelector(state => state);
+  // const dispatch = useDispatch();
+  // const [clickedBiz, setClickedBiz] = useState();
 
   const handleImageClick = (e) => {
     // dispatch(setCurrentBiz(e))
@@ -36,11 +37,15 @@ export default function Business({ business, clickOnBusiness, id }) {
   //   return
   // }, [business])
 
+  const chooseImage = () => {
+    return business.imageSrc ? business.imageSrc : defaultImage;
+  } 
+
 
   return (
       <div className="Business" id={id}>
         <div className="image-container">
-          <img src={business.imageSrc} alt={[business.coordinates.longitude, business.coordinates.latitude]} onClick={handleImageClick}/>
+          <img src={chooseImage()} alt={[business.coordinates.longitude, business.coordinates.latitude]} onClick={handleImageClick}/>
         </div>
         <a href={business.url} target="_blank" rel="noopener noreferrer" className="Business-name"><h2>{business.name}</h2></a>
         <div className="Business-information">

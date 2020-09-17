@@ -1,4 +1,4 @@
-import redux, {createStore} from "redux";
+import {createStore} from "redux";
 
 // export Action Creator
 export const setCurrentBiz = (e) => {

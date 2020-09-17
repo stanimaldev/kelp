@@ -75,7 +75,17 @@ h1 {
 
 @media only screen and (min-width: 1px) and (max-width: 900px) {
   .BizListContainer {
-    margin-top: 23em;
+    /* margin-top: 23em; */
   }
 
+  /* map on bottom */
+  /* #mapContainer {
+    position: absolute;
+    bottom: -95vh;
+  } */
+
+  .loader {
+    margin-top: 2em;
+  }
+  
 }

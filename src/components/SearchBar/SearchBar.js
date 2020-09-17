@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import './SearchBar.css';
 
 // Auto location populator
@@ -23,7 +23,7 @@ export default function SearchBar(props) {
 
     const handleSortByChange = (sortByOption) => {
         setSortBy(sortByOption);
-        console.log(sortByOption);
+        // console.log(sortByOption);
         if (term && location) {
             console.log(`sort option changed to ${sortByOption}`);
             handleSearch();
