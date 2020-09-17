@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kelp/static/css/main.f1de1ad4.chunk.css",
-    "main.js": "/kelp/static/js/main.613eb06f.chunk.js",
-    "main.js.map": "/kelp/static/js/main.613eb06f.chunk.js.map",
+    "main.js": "/kelp/static/js/main.7414aabe.chunk.js",
+    "main.js.map": "/kelp/static/js/main.7414aabe.chunk.js.map",
     "runtime-main.js": "/kelp/static/js/runtime-main.c3ad113a.js",
     "runtime-main.js.map": "/kelp/static/js/runtime-main.c3ad113a.js.map",
     "static/js/2.17ee7728.chunk.js": "/kelp/static/js/2.17ee7728.chunk.js",
     "static/js/2.17ee7728.chunk.js.map": "/kelp/static/js/2.17ee7728.chunk.js.map",
     "index.html": "/kelp/index.html",
-    "precache-manifest.15f328bfdaf2532667be8ca8d5677925.js": "/kelp/precache-manifest.15f328bfdaf2532667be8ca8d5677925.js",
+    "precache-manifest.14d663b3675ddb347f0d8cde7ae02a6b.js": "/kelp/precache-manifest.14d663b3675ddb347f0d8cde7ae02a6b.js",
     "service-worker.js": "/kelp/service-worker.js",
     "static/css/main.f1de1ad4.chunk.css.map": "/kelp/static/css/main.f1de1ad4.chunk.css.map",
     "static/js/2.17ee7728.chunk.js.LICENSE.txt": "/kelp/static/js/2.17ee7728.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.c3ad113a.js",
     "static/js/2.17ee7728.chunk.js",
     "static/css/main.f1de1ad4.chunk.css",
-    "static/js/main.613eb06f.chunk.js"
+    "static/js/main.7414aabe.chunk.js"
   ]
 }
