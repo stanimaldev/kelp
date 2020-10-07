@@ -4,8 +4,6 @@ import './SearchBar.css';
 // Auto location populator
 
 
-
-
 export default function SearchBar(props) {
     const [term, setTerm] = useState('');
     const [location, setLocation] = useState('');
@@ -27,7 +25,7 @@ export default function SearchBar(props) {
         if (term && location) {
             console.log(`sort option changed to ${sortByOption}`);
             handleSearch();
-            // ghetto bandaid fix to the "needing to double click sorting options for it to load new results with different sorting option applied"
+            // makeshift bandaid fix to the "needing to double click sorting options for it to load new results with different sorting option applied"
             // setTimeout(() => {
             //     handleSearch();
             // }, 0);
@@ -123,21 +121,7 @@ export default function SearchBar(props) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// OLD CLASS BASED COMPONENT:
 
 // class SearchBar extends React.Component {
     // constructor(props) {

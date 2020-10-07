@@ -35,7 +35,6 @@ const Yelp = {
 
 
 
-
 // const Yelp = {
 //     search(term, location, sortBy) {
 //             /* to bypass the CORS restriction, use CORS Anywhere */
@@ -81,17 +80,12 @@ const Yelp = {
 // };
 
 
-
-
 export default Yelp;
 
 
 
 
-
-
-
-/* Example would be: (taken from App.js) */
+/* Example would be: (OG taken from App.js) */
 // const business = {
 //   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
 //   name: 'MarginOtto Pizzeria',

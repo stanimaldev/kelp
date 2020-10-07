@@ -190,7 +190,7 @@ export default function App() {
 
 
 
-
+// OLD CLASS BASED COMPONENT:
 
 // class App extends React.Component {
   // constructor(props){
@@ -236,9 +236,7 @@ export default function App() {
   //   }
   // }
 
-
   /* GOOGLE MAP // LIFESAVER video: https://www.youtube.com/watch?v=W5LhLZqj76s (initMap is not a function error: because the script needs to look at the 'window' level. so at window.document.body.. etc. window.initMap = this.initMap)*/
-
 
   // renderMap = () => {
   //   loadScript("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js");

@@ -26,10 +26,8 @@ export const currentBusinessReducer = (state = defaultState, action) => {
   }
 }
 
-
 // Redux Store
 const currentBusinessStore = createStore(currentBusinessReducer);
-
 
 // Subscribe Function
 // currentBusinessStore.subscribe(() => console.log(currentBusinessStore.getState()))

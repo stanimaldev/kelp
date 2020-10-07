@@ -67,6 +67,7 @@ export default function Business({ business, clickOnBusiness, id }) {
 
 
 
+// OLD CLASS BASED COMPONENT:
 
 // class Business extends React.Component {
 //     render() {

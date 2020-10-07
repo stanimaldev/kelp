@@ -1,4 +1,5 @@
-This is the README file for Kelp! KELP KELP!
+[Kelp](https://stanjdev.github.io/kelp/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

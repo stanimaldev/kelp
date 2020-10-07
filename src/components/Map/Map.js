@@ -106,7 +106,6 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
       }
     // }, 2000);
   
-
     // add markers to map
     geojson.features.forEach(function(marker) {
     
@@ -161,9 +160,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
           // console.log("clicked", marker)
         }
       })
-
     });
-
   }, [businesses]);
 
 
@@ -274,8 +271,6 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
       <div id="mapContainer">
         <div id='map'></div>
       </div>
-
-
 
 
 
