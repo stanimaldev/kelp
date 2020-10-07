@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kelp/static/css/main.f1de1ad4.chunk.css",
-    "main.js": "/kelp/static/js/main.7414aabe.chunk.js",
-    "main.js.map": "/kelp/static/js/main.7414aabe.chunk.js.map",
+    "main.css": "/kelp/static/css/main.420e9e68.chunk.css",
+    "main.js": "/kelp/static/js/main.61fb5058.chunk.js",
+    "main.js.map": "/kelp/static/js/main.61fb5058.chunk.js.map",
     "runtime-main.js": "/kelp/static/js/runtime-main.c3ad113a.js",
     "runtime-main.js.map": "/kelp/static/js/runtime-main.c3ad113a.js.map",
     "static/js/2.17ee7728.chunk.js": "/kelp/static/js/2.17ee7728.chunk.js",
     "static/js/2.17ee7728.chunk.js.map": "/kelp/static/js/2.17ee7728.chunk.js.map",
     "index.html": "/kelp/index.html",
-    "precache-manifest.14d663b3675ddb347f0d8cde7ae02a6b.js": "/kelp/precache-manifest.14d663b3675ddb347f0d8cde7ae02a6b.js",
+    "precache-manifest.60c584615c6c83c403690f6597598833.js": "/kelp/precache-manifest.60c584615c6c83c403690f6597598833.js",
     "service-worker.js": "/kelp/service-worker.js",
-    "static/css/main.f1de1ad4.chunk.css.map": "/kelp/static/css/main.f1de1ad4.chunk.css.map",
+    "static/css/main.420e9e68.chunk.css.map": "/kelp/static/css/main.420e9e68.chunk.css.map",
     "static/js/2.17ee7728.chunk.js.LICENSE.txt": "/kelp/static/js/2.17ee7728.chunk.js.LICENSE.txt",
     "static/media/SearchBar.css": "/kelp/static/media/background_search_mobile.5d0905e6.jpg",
     "static/media/favicon.ico": "/kelp/static/media/favicon.83942fdc.ico",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.c3ad113a.js",
     "static/js/2.17ee7728.chunk.js",
-    "static/css/main.f1de1ad4.chunk.css",
-    "static/js/main.7414aabe.chunk.js"
+    "static/css/main.420e9e68.chunk.css",
+    "static/js/main.61fb5058.chunk.js"
   ]
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed07cc9b9cf19065edfad0bb625c6f57",
+    "revision": "ae14419128c45164ccc3e82e72c17885",
     "url": "/kelp/index.html"
   },
   {
-    "revision": "a4d8691e3b3bbd09ddd8",
-    "url": "/kelp/static/css/main.f1de1ad4.chunk.css"
+    "revision": "d1b16db9e7d8444f26dc",
+    "url": "/kelp/static/css/main.420e9e68.chunk.css"
   },
   {
     "revision": "b85d0a9dc883540f9f71",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kelp/static/js/2.17ee7728.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a4d8691e3b3bbd09ddd8",
-    "url": "/kelp/static/js/main.7414aabe.chunk.js"
+    "revision": "d1b16db9e7d8444f26dc",
+    "url": "/kelp/static/js/main.61fb5058.chunk.js"
   },
   {
     "revision": "2284dda81b3aa5ed853c",
