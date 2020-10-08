@@ -32,7 +32,7 @@ export default function App() {
         p.textContent = "No results found! 😱😢";
         p.style.cssText = "color: white; background: red; padding: 10px; border-radius: 4px; text-align: center; width: 300px; font-size: 1.3rem";
         noresults.append(p);
-        console.log("NOTHING FOUND!");
+        // console.log("NOTHING FOUND!");
         setTimeout(() => {
           noresults.removeChild(p);
         }, 5000);

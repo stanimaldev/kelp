@@ -102,7 +102,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
       if (currentMarkers.current !== businesses) {
         currentMarkers.current.forEach(marker => marker.remove());
         currentMarkers.current = [];
-        console.log("remove existing markers!", currentMarkers)
+        // console.log("remove existing markers!", currentMarkers)
       }
     // }, 2000);
   
@@ -189,7 +189,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
 
   useEffect(() => {
     renderMap();
-    console.log("first rendermap() launched")
+    // console.log("first rendermap() launched")
   }, [renderMap])
 
 
