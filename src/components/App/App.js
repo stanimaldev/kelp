@@ -139,7 +139,9 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="logo-container">
+        {/* need to do "/" for vercel and netlify, "/kelp" for github pages because of their urls */}
         <a href="/" className="logo" style={{textDecoration: 'none', color: "white"}}>
+        {/* <a href="/kelp" className="logo" style={{textDecoration: 'none', color: "white"}}> */}
           <span>kelp</span>
           <img src={kelp} alt="kelp logo" height="30px"/>
         </a>

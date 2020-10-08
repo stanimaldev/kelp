@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.fe35f18b.chunk.css",
-    "main.js": "./static/js/main.2ba90ba0.chunk.js",
-    "main.js.map": "./static/js/main.2ba90ba0.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.ef780c18.js",
-    "runtime-main.js.map": "./static/js/runtime-main.ef780c18.js.map",
-    "static/js/2.17ee7728.chunk.js": "./static/js/2.17ee7728.chunk.js",
-    "static/js/2.17ee7728.chunk.js.map": "./static/js/2.17ee7728.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.f9a56ce74136f9781fdc64c24fd67388.js": "./precache-manifest.f9a56ce74136f9781fdc64c24fd67388.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.fe35f18b.chunk.css.map": "./static/css/main.fe35f18b.chunk.css.map",
-    "static/js/2.17ee7728.chunk.js.LICENSE.txt": "./static/js/2.17ee7728.chunk.js.LICENSE.txt",
-    "static/media/SearchBar.css": "./static/media/background_search_mobile.5d0905e6.jpg",
-    "static/media/favicon.ico": "./static/media/favicon.83942fdc.ico",
-    "static/media/kelp.png": "./static/media/kelp.062a796b.png"
+    "main.css": "/kelp/static/css/main.963a2346.chunk.css",
+    "main.js": "/kelp/static/js/main.0a9b93cb.chunk.js",
+    "main.js.map": "/kelp/static/js/main.0a9b93cb.chunk.js.map",
+    "runtime-main.js": "/kelp/static/js/runtime-main.c3ad113a.js",
+    "runtime-main.js.map": "/kelp/static/js/runtime-main.c3ad113a.js.map",
+    "static/js/2.17ee7728.chunk.js": "/kelp/static/js/2.17ee7728.chunk.js",
+    "static/js/2.17ee7728.chunk.js.map": "/kelp/static/js/2.17ee7728.chunk.js.map",
+    "index.html": "/kelp/index.html",
+    "precache-manifest.b6a23d048abec160da6ef5f46568a7d0.js": "/kelp/precache-manifest.b6a23d048abec160da6ef5f46568a7d0.js",
+    "service-worker.js": "/kelp/service-worker.js",
+    "static/css/main.963a2346.chunk.css.map": "/kelp/static/css/main.963a2346.chunk.css.map",
+    "static/js/2.17ee7728.chunk.js.LICENSE.txt": "/kelp/static/js/2.17ee7728.chunk.js.LICENSE.txt",
+    "static/media/SearchBar.css": "/kelp/static/media/background_search_mobile.5d0905e6.jpg",
+    "static/media/favicon.ico": "/kelp/static/media/favicon.83942fdc.ico",
+    "static/media/kelp.png": "/kelp/static/media/kelp.062a796b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ef780c18.js",
+    "static/js/runtime-main.c3ad113a.js",
     "static/js/2.17ee7728.chunk.js",
-    "static/css/main.fe35f18b.chunk.css",
-    "static/js/main.2ba90ba0.chunk.js"
+    "static/css/main.963a2346.chunk.css",
+    "static/js/main.0a9b93cb.chunk.js"
   ]
 }
