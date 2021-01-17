@@ -3,9 +3,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 1.5rem 3%;
+    padding-top: 1.5em;
+    border-radius: 0.7em;
     /* border: solid palevioletred 2px; */
     /* width: 45%; */
     /* background-color: #eed6a5b6; */
-    padding-top: 1.5em;
-    border-radius: 0.7em;
   }

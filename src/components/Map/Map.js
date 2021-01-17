@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 const API_KEY = process.env.REACT_APP_MAPBOXGL_ACCESSTOKEN;
-// import currentBusinessStore from '../redux/store';
 
 export default function Map({ onClick, businesses, clickedBusiness }) {
   const [mapOpen, setMapView] = useState(false);
@@ -12,6 +11,7 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
   const [stateMarkers, setStateMarkers] = useState([]);
   // const businessId = useRef();
   let currentMarkers = useRef([]);
+  
 
   const dispatch = useDispatch();
   // const globalState = useSelector(state => state);
@@ -68,34 +68,8 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
           }
         }
       })
-      
-      // [{
-      //   type: 'Feature',
-      //   geometry: {
-      //     type: 'Point',
-      //     coordinates: [-77.032, 38.913]
-      //   },
-      //   properties: {
-      //     title: 'Mapbox',
-      //     description: 'Washington, D.C.'
-      //   }
-      // },
-      // {
-      //   type: 'Feature',
-      //   geometry: {
-      //     type: 'Point',
-      //     coordinates: [-122.414, 37.776]
-      //   },
-      //   properties: {
-      //     title: 'Mapbox',
-      //     description: 'San Francisco, California',
-      //     haircut: 'bald'
-      //   }
-      // }]
     };
-    // console.log(geojson);
     
-
 
     // remove previous markers
     // setTimeout(() => {
@@ -217,30 +191,6 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
     }, 0)
   }
 
-  // // Map box sticky scroll attempt 1: 
-  // useEffect(() => {
-  //   // window.onload = function() {
-  //     window.onscroll = function() {stickyMap()};
-
-  //     // Get the header
-  //     var myMap = document.getElementById("mapContainer");
-  //     // let myMap = document.querySelector('.mapComponent');
-
-  //     // Get the offset position of the navbar
-  //     let sticky = myMap.offsetTop;
-
-  //     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  //     function stickyMap() {
-  //       if (window.pageYOffset > sticky) {
-  //         myMap.classList.add("sticky");
-  //         console.log("yoyoyo!")
-  //       } else {
-  //         myMap.classList.remove("sticky");
-  //         console.log("up top!")
-  //       }
-  //     }
-  //   // }
-  // }, [])
 
   useEffect(() => {
     const map = document.querySelector('#mapContainer');
@@ -271,50 +221,6 @@ export default function Map({ onClick, businesses, clickedBusiness }) {
       <div id="mapContainer">
         <div id='map'></div>
       </div>
-
-
-
-      {/* OLD GOOGLE MAPS JSX/HTML */}
-      {/* <div ref={el => this.mapContainer = el} style={mapOpen} className="mapContainer" /> */}
-        
-
-        {/* <section style={mapView}>
-          <div className="pac-card" id="pac-card">
-            <div>
-              <div id="title">
-                Autocomplete search
-              </div>
-              <div id="type-selector" className="pac-controls">
-                <input type="radio" name="type" id="changetype-all" checked="checked" />
-                <label htmlFor="changetype-all">All</label>
-
-                <input type="radio" name="type" id="changetype-establishment" />
-                <label htmlFor="changetype-establishment">Establishments</label>
-
-                <input type="radio" name="type" id="changetype-address" />
-                <label htmlFor="changetype-address">Addresses</label>
-
-                <input type="radio" name="type" id="changetype-geocode" />
-                <label htmlFor="changetype-geocode">Geocodes</label>
-              </div>
-              <div id="strict-bounds-selector" className="pac-controls">
-                <input type="checkbox" id="use-strict-bounds" value="" />
-                <label htmlFor="use-strict-bounds">Strict Bounds</label>
-              </div>
-            </div>
-            <div id="pac-container">
-              <input id="pac-input" type="text"
-                  placeholder="Enter a location" />
-            </div>
-          </div>
-
-          <div id="map"></div>
-          <div id="infowindow-content">
-            <img src="" width="16" height="16" id="place-icon" />
-            <span id="place-name"  className="title"></span><br></br>
-            <span id="place-address"></span>
-          </div>
-        </section> */}
     </div>
   )
 }

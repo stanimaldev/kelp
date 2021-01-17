@@ -1,0 +1,270 @@
+html {
+  font-family: Poppins, sans-serif;
+}
+
+.Business {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, minmax(1em, 1fr));
+    grid-gap: 0.5em;
+    /* width: 16.66rem; */
+    margin: 0 .5rem 2.3rem .5rem;
+    transition: all ease 0.4s;
+    animation: loadbusiness 1s ease;
+    background-color: #eddcbc;
+    padding: 1em;
+    border-radius: 0.7em;
+    height: 9em;
+  }
+
+  .activeBiz {
+    background-color: lightcyan;
+  }
+
+  @keyframes loadbusiness {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  } 
+
+  .Business .image-container {
+    height: 6em;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    transition: all ease 0.3s;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    border: solid green 1px;
+  }
+  
+  .Business .image-container img {
+    /* overflow: hidden; */
+    transition: all ease 0.3s;
+    padding-top: 0.15em;
+  }
+  
+  /* .Business .image-container:hover{
+    box-shadow:  3px 4px 30px 1px black;
+    transform: scale(1.03, 1.03);
+    opacity: 0.5;
+    width: 17rem;
+    background-color: #C0D6DF;
+    border-radius: 15px;
+  } */
+
+  .Business h2 {
+    margin-bottom: .5rem;
+    /* font-size: 1.2rem; */
+    font-weight: 600;  
+  }
+
+  .Business-name {
+    color: black;
+    text-decoration: none;
+    transition: all ease-out 0.3s;
+    border: solid green 1px;
+    grid-row: 2 / -1;
+    grid-column: 1 / 3;
+  }
+
+  /* .Business-name:hover {
+    color: #cc7953;
+  } */
+  
+  .Business-information {
+    /* display: flex; */
+    justify-content: space-between;
+    grid-row: 1 / -1;
+    grid-column: 3 / -1;
+    border: solid green 1px;
+  }
+  
+  .Business-information p {
+    font-size: .88rem;
+    font-weight: 300;
+    line-height: 1rem;
+  }
+  
+
+  .Business-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all ease 0.4s;
+    border: solid green 1px;
+    grid-row: 2 / -1;
+    grid-column: 1 / 2 ;
+  }
+  
+  /* .Business-address:hover {
+    box-shadow:  3px 4px 30px 1px whitesmoke;
+    transform: translate(0%, -2%);
+  } */
+
+  .Business-address a {
+    color: rgb(28, 153, 187);
+    text-decoration: none;
+    transition: all ease 0.3s;
+  }
+
+  /* .Business-address a:hover {
+    color: #cc7953;
+  } */
+
+  .Business-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    border: solid green 1px;
+  }
+  
+  .Business-reviews h3 {
+    color: #CCA353;
+    font-weight: 600;
+  }
+  
+  .Business-reviews .rating {
+    font-size: .88rem;
+    line-height: 1rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (min-width: 900px) {
+
+  .Business .image-container:hover{
+    box-shadow:  3px 4px 30px 1px black;
+    transform: scale(1.03, 1.03);
+    /* opacity: 0.5; */
+    /* width: 17rem; */
+    /* background-color: #C0D6DF; */
+    border-radius: 15px;
+  }
+
+    .Business-name:hover {
+      color: #cc7953;
+    }
+
+    .Business-address:hover {
+      /* box-shadow:  3px 4px 30px 1px whitesmoke; */
+      transform: translate(0%, 0%);
+    }
+  
+    .Business-address a:hover {
+      color: #cc7953;
+    }
+
+    .Business {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 16.66rem;
+      margin: 0 .5rem 2.3rem .5rem;
+      transition: all ease 0.4s;
+      animation: loadbusiness 1s ease;
+      background-color: #eddcbc;
+      padding: 1em;
+      border-radius: 0.7em;
+    }
+
+    .Business .image-container {
+      height: 16.66rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      transition: all ease 0.3s;
+    }
+    
+    .Business .image-container img {
+      /* overflow: hidden; */
+      transition: all ease 0.3s;
+      padding-top: 0.15em;
+    }
+    
+    .Business h2 {
+      margin-bottom: .5rem;
+      font-size: 1.2rem;
+      font-weight: 600;  
+    }
+  
+    .Business-name {
+      color: black;
+      text-decoration: none;
+      transition: all ease-out 0.3s;
+    }
+  
+    /* .Business-name:hover {
+      color: #cc7953;
+    } */
+    
+    .Business-information {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .Business-information p {
+      font-size: .88rem;
+      font-weight: 300;
+      line-height: 1rem;
+    }
+    
+    .Business-address {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all ease 0.4s;
+    }
+    
+    /* .Business-address:hover {
+      box-shadow:  3px 4px 30px 1px whitesmoke;
+      transform: translate(0%, -2%);
+    } */
+  
+    .Business-address a {
+      color: rgb(28, 153, 187);
+      text-decoration: none;
+      transition: all ease 0.3s;
+    }
+  
+    /* .Business-address a:hover {
+      color: #cc7953;
+    } */
+  
+    .Business-reviews {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: right;
+    }
+    
+    .Business-reviews h3 {
+      color: #CCA353;
+      font-weight: 600;
+    }
+    
+    .Business-reviews .rating {
+      font-size: .88rem;
+      line-height: 1rem;
+    }
+
+  }
+
+  
