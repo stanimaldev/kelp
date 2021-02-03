@@ -19,7 +19,6 @@ export default function App() {
   
   const globalState = useSelector(state => state);
   
-
   function searchYelp(term, location, sortBy) {
     setIsLoading(true);
 
